@@ -1,4 +1,7 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'default'
+})
 useHead({
   title: 'starter nuxt',
   link: [
@@ -15,7 +18,6 @@ useHead({
   <NuxtLayout>
     <main font-sans p="x-4 y-10" text="center gray-700 dark:gray-200">
       <NuxtPage />
-      <LazyFooter />
     </main>
   </NuxtLayout>
 </template>
@@ -28,7 +30,7 @@ html, body , #__nuxt{
 }
 
 html.dark {
-  background: #222222;
+  background: #000000;
   color: #ffffff;
 }
 </style>
