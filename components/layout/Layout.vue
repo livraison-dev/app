@@ -2,12 +2,40 @@
 import type { BorderPosition } from '~/interface'
 
 const props = withDefaults(defineProps<{
+  /**
+   * layout width size
+   * @default screen width size
+   */
   w?: number
+  /**
+   * layout height size
+   * @default screen height size
+   */
   h?: number
+  /**
+   * background color in light mode
+   * @default #FFFFFF
+   */
   lightBg?: string
+  /**
+   * background color in dark mode
+   * @default #050505
+   */
   darkBg?: string
+  /**
+   * The position of the stroke
+   * @default ['top', 'left', 'bottom', 'right']
+   */
   borderPositions?: BorderPosition[]
+  /**
+   * border color in light mode
+   * @default #E3E2E4
+   */
   lightBorderColor?: string
+  /**
+   * border color in dark mode
+   * @default #2E2E2E
+   */
   darkBorderColor?: string
 }>(), {
   w: undefined,
