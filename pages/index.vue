@@ -1,12 +1,17 @@
 <template>
-  <div i-carbon-piggy-bank-slot text-4xl inline-block />
-  <Suspense>
-    <LazyViewsPageView />
-    <template #fallback>
-      <div op50 italic>
-        <span animate-pulse>Loading...</span>
-      </div>
-    </template>
-  </Suspense>
-  <LazyInputEntry />
+  <Splitpanes style="height: 400px">
+    <SplitpanesPane min-size="20">1</SplitpanesPane>
+  <SplitpanesPane>
+    <splitpanes horizontal>
+      <SplitpanesPane>2</SplitpanesPane>
+      <SplitpanesPane>3</SplitpanesPane>
+      <SplitpanesPane>4</SplitpanesPane>
+    </splitpanes>
+  </SplitpanesPane>
+  <SplitpanesPane>5</SplitpanesPane>
+  </Splitpanes>
 </template>
+
+<style>
+
+</style>
