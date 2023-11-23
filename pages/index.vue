@@ -7,7 +7,3 @@ definePageMeta({
 <template>
   <SidebarActionIcon />
 </template>
-
-<style>
-
-</style>

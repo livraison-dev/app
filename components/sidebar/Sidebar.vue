@@ -31,8 +31,7 @@ watch(() => showSidebar.show, () => {
 
 <template>
   <SplitpanesPane
-    class="bg-light-50 dark:bg-#050505"
-    border="r gray-400/20"
+    class="bg-light-50 dark:bg-#050505 border-r border-gray-400/20"
     :min-size="paneSize.minSize"
     :size="paneSize.size"
     :max-size="paneSize.maxSize"
@@ -42,7 +41,3 @@ watch(() => showSidebar.show, () => {
     </nav>
   </SplitpanesPane>
 </template>
-
-<style scoped>
-
-</style>
