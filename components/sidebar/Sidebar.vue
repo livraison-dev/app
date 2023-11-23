@@ -38,18 +38,13 @@ watch(() => showSidebar.show, () => {
   <SplitpanesPane
     v-if="show"
     class="bg-light-50 dark:bg-#050505"
-    border="r t gray-400/20"
+    border="r gray-400/20"
     :min-size="paneSize.minSize"
     :size="paneSize.size"
     :max-size="paneSize.maxSize"
   >
     <nav class="flex flex-col">
       <SidebarActionIcon />
-      <div>avatar and username</div>
-      <div>search</div>
-      <div>all request</div>
-      <div>settings</div>
-      <div>Favourites</div>
     </nav>
   </SplitpanesPane>
 </template>
