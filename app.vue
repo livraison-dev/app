@@ -3,12 +3,12 @@ definePageMeta({
   layout: 'default',
 })
 useHead({
-  title: 'starter nuxt',
+  title: 'Livraison',
   link: [
     {
       rel: 'icon',
       type: 'image/svg+xml',
-      href: '/favicon.svg',
+      href: '/favicon.png',
     },
   ],
 })
@@ -16,7 +16,7 @@ useHead({
 
 <template>
   <NuxtLayout>
-    <main font-sans p="x-4 y-10" text="center gray-700 dark:gray-200">
+    <main font-sans text="center gray-700 dark:gray-200">
       <NuxtPage />
     </main>
   </NuxtLayout>

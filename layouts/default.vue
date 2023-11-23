@@ -4,6 +4,13 @@
 
 <template>
   <Layout :border-positions="[]">
-    <slot />
+    <Splitpanes>
+      <Sidebar>
+        UserName
+      </Sidebar>
+      <SplitpanesPane>
+        <slot />
+      </SplitpanesPane>
+</Splitpanes>
   </Layout>
 </template>

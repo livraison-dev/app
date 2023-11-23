@@ -56,10 +56,10 @@ function bindEvents() {
 }
 
 function unbindEvents() {
-  document.removeEventListener('mousemove', onMouseMove, { passive: false })
+  document.removeEventListener('mousemove', onMouseMove)
   document.removeEventListener('mouseup', onMouseUp)
   if ('ontouchstart' in window) {
-    document.removeEventListener('touchmove', onMouseMove, { passive: false })
+    document.removeEventListener('touchmove', onMouseMove)
     document.removeEventListener('touchend', onMouseUp)
   }
 }
@@ -472,7 +472,7 @@ function initialPanesSizing() {
       readjustSizes(leftToAllocate, ungrowable, unshrinkable)
   }
 }
-function equalizeAfterAddOrRemove({ addedPane, removedPane }: any = {}) {
+function equalizeAfterAddOrRemove({ addedPane }: any = {}) {
   let equalSpace = 100 / panesCount.value
   let leftToAllocate = 0
   const ungrowable: any[] = []
@@ -494,8 +494,8 @@ function equalizeAfterAddOrRemove({ addedPane, removedPane }: any = {}) {
     return // Ok.
 
   panes.value.forEach((pane) => {
-    if (addedPane && addedPane.givenSize !== null && addedPane.id === pane.id) {}
-    else { pane.size = Math.max(Math.min(equalSpace, pane.max), pane.min) }
+    if (!(addedPane && addedPane.givenSize !== null && addedPane.id === pane.id))
+      pane.size = Math.max(Math.min(equalSpace, pane.max), pane.min)
 
     leftToAllocate -= pane.size
     if (pane.size >= pane.max)
@@ -515,7 +515,7 @@ function readjustSizes(leftToAllocate: any, ungrowable: any, unshrinkable: any) 
     equalSpaceToAllocate = leftToAllocate / (panesCount.value - ungrowable.length)
   else equalSpaceToAllocate = leftToAllocate / (panesCount.value - unshrinkable.length)
 
-  panes.value.forEach((pane, i) => {
+  panes.value.forEach((pane) => {
     if (leftToAllocate > 0 && !ungrowable.includes(pane.id)) {
       // Need to diff the size before and after to get the exact allocated space.
       const newPaneSize = Math.max(Math.min(pane.size + equalSpaceToAllocate, pane.max), pane.min)
