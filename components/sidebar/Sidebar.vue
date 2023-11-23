@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const showSidebar = useShowSidebarStore()
 
-const show = ref<boolean>(false)
-
 const paneSize = ref<{
   minSize: number
   size: number
@@ -13,9 +11,6 @@ const paneSize = ref<{
   maxSize: 30,
 })
 
-onMounted(() => {
-  show.value = true
-})
 watch(() => showSidebar.show, () => {
   if (showSidebar.show) {
     paneSize.value = {
@@ -36,7 +31,6 @@ watch(() => showSidebar.show, () => {
 
 <template>
   <SplitpanesPane
-    v-if="show"
     class="bg-light-50 dark:bg-#050505"
     border="r gray-400/20"
     :min-size="paneSize.minSize"
