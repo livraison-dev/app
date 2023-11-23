@@ -52,6 +52,9 @@ devDependencies:
   happy-dom:
     specifier: ^12.10.3
     version: 12.10.3
+  nuxt-icon:
+    specifier: ^0.6.6
+    version: 0.6.6(nuxt@3.8.1)(vite@4.5.0)(vue@3.3.8)
   nuxt-vitest:
     specifier: ^0.11.3
     version: 0.11.3(@vitejs/plugin-vue-jsx@3.0.2)(@vitejs/plugin-vue@4.4.1)(happy-dom@12.10.3)(vite@4.5.0)(vitest@0.34.6)(vue-router@4.2.5)(vue@3.3.8)
@@ -867,6 +870,12 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
+  /@iconify/collections@1.0.359:
+    resolution: {integrity: sha512-NzEJQjKFMtv41hMCn1fgBXiyOMV8Po6GyDQiRB185dSI10pz0aJ9Y9Dd/kRVEaoPWOwOLl0Pcw8ZgfIbbAHgTQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
@@ -881,6 +890,15 @@ packages:
       local-pkg: 0.4.3
     transitivePeerDependencies:
       - supports-color
+
+  /@iconify/vue@4.1.1(vue@3.3.8):
+    resolution: {integrity: sha512-RL85Bm/DAe8y6rT6pux7D2FJSiUEM/TPfyK7GrbAOfTSwrhvwJW+S5yijdGcmtXouA8MtuH9C7l4hiSE4mLMjg==}
+    peerDependencies:
+      vue: '>=3'
+    dependencies:
+      '@iconify/types': 2.0.0
+      vue: 3.3.8(typescript@5.2.2)
+    dev: true
 
   /@ioredis/commands@1.2.0:
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
@@ -5444,6 +5462,21 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.3
+
+  /nuxt-icon@0.6.6(nuxt@3.8.1)(vite@4.5.0)(vue@3.3.8):
+    resolution: {integrity: sha512-rTRUIjYVlYAyj6ZPVVwGxyyiINNudhC6r9vF96Ec5ZaLOC6mSdUBnJ3oV6sJgViYrIkDLwbIjviFvRcZzvgu3g==}
+    dependencies:
+      '@iconify/collections': 1.0.359
+      '@iconify/vue': 4.1.1(vue@3.3.8)
+      '@nuxt/devtools-kit': 1.0.2(nuxt@3.8.1)(vite@4.5.0)
+      '@nuxt/kit': 3.8.1
+    transitivePeerDependencies:
+      - nuxt
+      - rollup
+      - supports-color
+      - vite
+      - vue
+    dev: true
 
   /nuxt-vitest@0.11.3(@vitejs/plugin-vue-jsx@3.0.2)(@vitejs/plugin-vue@4.4.1)(happy-dom@12.10.3)(vite@4.5.0)(vitest@0.34.6)(vue-router@4.2.5)(vue@3.3.8):
     resolution: {integrity: sha512-jGyrOXbgwlakVaDsQCLtdttXXY2bX4J5r22rr0CTXqIFO3jhnf8e3kAU+zCQe/WSp/xtM+2HZEwrU+jqy5zuDQ==}

@@ -1,0 +1,33 @@
+<script setup lang="ts">
+const showSidebar = useShowSidebarStore()
+
+function handleSidebarToggle() {
+  showSidebar.handleToggleSidebar()
+}
+</script>
+
+<template>
+  <div
+    h="14"
+    items="center"
+    flex="~ [0_0_auto]"
+    p="x-16px"
+    justify="between"
+  >
+    <button
+      w="8"
+      h="8"
+      text="6"
+      color="zinc-500"
+      cursor="pointer"
+      bg="hover:gray-500 hover:op-20"
+      flex="~"
+      justify="center"
+      items="center"
+      rounded="~"
+      @click="handleSidebarToggle"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" style="user-select: none; flex-shrink: 0;"><path fill="currentColor" fill-rule="evenodd" d="M2.25 7A2.75 2.75 0 0 1 5 4.25h14A2.75 2.75 0 0 1 21.75 7v10A2.75 2.75 0 0 1 19 19.75H5A2.75 2.75 0 0 1 2.25 17V7ZM5 5.75h5.25v12.5H5c-.69 0-1.25-.56-1.25-1.25V7c0-.69.56-1.25 1.25-1.25Zm6.75 0v12.5H19c.69 0 1.25-.56 1.25-1.25V7c0-.69-.56-1.25-1.25-1.25h-7.25ZM6 7.25a.75.75 0 0 0 0 1.5h2a.75.75 0 0 0 0-1.5H6Zm-.75 3.25A.75.75 0 0 1 6 9.75h2a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75ZM6 12.25a.75.75 0 0 0 0 1.5h2a.75.75 0 0 0 0-1.5H6Z" clip-rule="evenodd" /></svg>
+    </button>
+  </div>
+</template>

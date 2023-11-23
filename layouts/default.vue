@@ -5,12 +5,10 @@
 <template>
   <Layout :border-positions="[]">
     <Splitpanes>
-      <Sidebar>
-        UserName
-      </Sidebar>
-      <SplitpanesPane>
+      <Sidebar />
+      <SplitpanesPane :size="80" :min-size="70" :max-size="85">
         <slot />
       </SplitpanesPane>
-</Splitpanes>
+    </Splitpanes>
   </Layout>
 </template>
