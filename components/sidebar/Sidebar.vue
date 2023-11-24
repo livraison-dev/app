@@ -36,8 +36,13 @@ watch(() => showSidebar.show, () => {
     :size="paneSize.size"
     :max-size="paneSize.maxSize"
   >
-    <nav class="flex flex-col">
+    <nav class="flex flex-col" livraison-app="sideabr">
       <SidebarActionIcon />
+      <SidebarInnerLayout>
+        <div livraison-app="user-actions" class="flex px-4 py-1 [flex-flow:column_nowrap]">
+          <SidebarUser />
+        </div>
+      </SidebarInnerLayout>
     </nav>
   </SplitpanesPane>
 </template>

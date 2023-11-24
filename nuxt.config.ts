@@ -14,6 +14,12 @@ export default defineNuxtConfig({
       'store',
     ],
   },
+  components: {
+    dirs: [
+      'components',
+      'ui',
+    ],
+  },
   css: [
     '@unocss/reset/tailwind.css',
     '~/styles/splitpanes.css',

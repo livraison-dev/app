@@ -1,0 +1,10 @@
+{
+  "atDirectives": [
+    {
+      "name": "@apply"
+    },
+    {
+      "name": "@screen"
+    }
+  ]
+}
