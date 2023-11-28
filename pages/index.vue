@@ -4,6 +4,6 @@ const showSidebar = useShowSidebarStore()
 
 <template>
   <div>
-    <SidebarActionIcon v-if="!showSidebar.show" />
+    <SidebarIconAction v-if="!showSidebar.show" />
   </div>
 </template>

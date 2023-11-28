@@ -37,11 +37,12 @@ watch(() => showSidebar.show, () => {
     :max-size="paneSize.maxSize"
   >
     <nav class="flex flex-col" livraison-app="sideabr">
-      <SidebarActionIcon />
+      <SidebarIconAction />
       <SidebarInnerLayout>
         <div livraison-app="user-actions" class="flex px-4 py-1 [flex-flow:column_nowrap]">
           <SidebarUser />
           <SidebarSearch />
+          <SidebarSettings />
         </div>
       </SidebarInnerLayout>
     </nav>

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+defineOptions({
+  name: 'SidebarActionIcon',
+})
 const showSidebar = useShowSidebarStore()
 
 function handleSidebarToggle() {
