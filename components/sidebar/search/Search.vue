@@ -23,8 +23,14 @@ const { elementX, elementY, isOutside } = useMouseInElement(searchRef)
     <div
       livraison-app="effect"
       :style="`--mouse-x-size:${elementX}px;--mouse-y-size:${elementY}px;--mouse-outside:${isOutside ? '0' : '0.1'}`"
-      class="opacity-[var(--mouse-outside)] pointer-events-none absolute transition-all duration-[0.2s] [will-change:background,opacity] z-[1] rounded-[inherit] inset-0"
-      style="background: radial-gradient(64px circle at var(--mouse-x-size) var(--mouse-y-size),#eaeaea,transparent);"
+      class="sidebar-search-effect"
     />
   </div>
 </template>
+
+<style scoped>
+.sidebar-search-effect{
+  @apply opacity-[var(--mouse-outside)] pointer-events-none absolute transition-all duration-[0.2s] [will-change:background,opacity] z-[1] rounded-[inherit] inset-0;
+  background: radial-gradient(64px circle at var(--mouse-x-size) var(--mouse-y-size),#eaeaea,transparent);
+}
+</style>
