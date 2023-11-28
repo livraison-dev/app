@@ -2,7 +2,7 @@
 import type { BorderPosition } from '~/interface'
 
 defineOptions({
-  name: 'LayoutBasic'
+  name: 'LayoutBasic',
 })
 
 const props = withDefaults(defineProps<{
