@@ -1,9 +1,9 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: 'default',
-})
+const showSidebar = useShowSidebarStore()
 </script>
 
 <template>
-  <SidebarActionIcon />
+  <div>
+    <SidebarActionIcon v-if="!showSidebar.show" />
+  </div>
 </template>

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import type { BorderPosition } from '~/interface'
 
+defineOptions({
+  name: 'LayoutBasic'
+})
+
 const props = withDefaults(defineProps<{
   /**
    * layout width size

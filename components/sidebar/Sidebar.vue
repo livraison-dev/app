@@ -41,6 +41,7 @@ watch(() => showSidebar.show, () => {
       <SidebarInnerLayout>
         <div livraison-app="user-actions" class="flex px-4 py-1 [flex-flow:column_nowrap]">
           <SidebarUser />
+          <SidebarSearch />
         </div>
       </SidebarInnerLayout>
     </nav>

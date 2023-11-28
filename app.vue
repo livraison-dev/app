@@ -1,7 +1,4 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: 'default',
-})
 useHead({
   title: 'Livraison',
   link: [
@@ -17,7 +14,9 @@ useHead({
 <template>
   <NuxtLayout>
     <main font-sans text="gray-700 dark:gray-200">
-      <NuxtPage />
+      <LayoutRoot>
+        <NuxtPage />
+      </LayoutRoot>
     </main>
   </NuxtLayout>
 </template>
