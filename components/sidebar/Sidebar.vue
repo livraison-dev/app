@@ -38,13 +38,13 @@ watch(() => showSidebar.show, () => {
   >
     <nav class="flex flex-col" livraison-app="sideabr">
       <SidebarIconAction />
-      <SidebarInnerLayout>
+      <SidebarLayoutInner>
         <div livraison-app="user-actions" class="flex px-4 py-1 [flex-flow:column_nowrap]">
           <SidebarUser />
           <SidebarSearch />
           <SidebarSettings />
         </div>
-      </SidebarInnerLayout>
+      </SidebarLayoutInner>
     </nav>
   </SplitpanesPane>
 </template>
