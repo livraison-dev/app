@@ -1,40 +1,21 @@
 <script setup lang="ts">
-const showSidebar = useShowSidebarStore()
+const sidebar = useSidebarStore()
 
-const paneSize = ref<{
-  minSize: number
-  size: number
-  maxSize: number
-}>({
-  minSize: 15,
-  size: 20,
-  maxSize: 30,
-})
+watch(() => sidebar.show, () => {
+  if (sidebar.show)
+    sidebar.handleCreateSize()
 
-watch(() => showSidebar.show, () => {
-  if (showSidebar.show) {
-    paneSize.value = {
-      minSize: 15,
-      size: 20,
-      maxSize: 30,
-    }
-  }
-  else {
-    paneSize.value = {
-      minSize: 0,
-      size: 0,
-      maxSize: 0,
-    }
-  }
+  else
+    sidebar.handleClearSize()
 })
 </script>
 
 <template>
   <SplitpanesPane
     class="bg-light-50 dark:bg-#050505 border-r border-gray-400/20"
-    :min-size="paneSize.minSize"
-    :size="paneSize.size"
-    :max-size="paneSize.maxSize"
+    :size="sidebar.panSize.size"
+    :min-size="sidebar.panSize.minSize"
+    :max-size="sidebar.panSize.maxSize"
   >
     <nav class="flex flex-col" livraison-app="sideabr">
       <SidebarIconAction />

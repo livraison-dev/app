@@ -2,7 +2,7 @@
 defineOptions({
   name: 'SidebarActionIcon',
 })
-const showSidebar = useShowSidebarStore()
+const showSidebar = useSidebarStore()
 
 function handleSidebarToggle() {
   showSidebar.handleToggleSidebar()
