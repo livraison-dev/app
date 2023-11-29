@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     'nuxt-vitest',
     'nuxt-icon',
+    '@pinia-plugin-persistedstate/nuxt',
   ],
   imports: {
     dirs: [

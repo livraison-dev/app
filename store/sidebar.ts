@@ -3,7 +3,7 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 export const useSidebarStore = defineStore('useShowSidebar', () => {
   const show = ref<boolean>(true)
 
-  const size = ref<number>(20)
+  const size = ref<number>(0)
 
   const panSize = ref<{
     minSize: number
@@ -11,7 +11,7 @@ export const useSidebarStore = defineStore('useShowSidebar', () => {
     maxSize: number
   }>({
     minSize: 15,
-    size: 20,
+    size: 0,
     maxSize: 30,
   })
 
@@ -19,8 +19,12 @@ export const useSidebarStore = defineStore('useShowSidebar', () => {
     show.value = !show.value
   }
 
-  function handleClearSize() {
+  function handleMoveSize() {
     size.value = panSize.value.size
+  }
+
+  function handleClearSize() {
+    handleMoveSize()
     panSize.value = {
       minSize: 0,
       size: 0,
@@ -39,10 +43,13 @@ export const useSidebarStore = defineStore('useShowSidebar', () => {
     size,
     show,
     panSize,
+    handleMoveSize,
     handleToggleSidebar,
     handleClearSize,
     handleCreateSize,
   }
+}, {
+  persist: true,
 })
 
 if (import.meta.hot)

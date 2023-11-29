@@ -4,11 +4,16 @@ defineOptions({
 })
 
 const sidebar = useSidebarStore()
+
+function splitpanesResize(size: number) {
+  sidebar.panSize.size = size
+  sidebar.handleMoveSize()
+}
 </script>
 
 <template>
   <LayoutBasic :border-positions="[]">
-    <Splitpanes @resize="sidebar.panSize.size = $event[0].size">
+    <Splitpanes @resize="splitpanesResize($event[0].size)">
       <Sidebar />
       <SplitpanesPane :size="80" :min-size="70" :max-size="85">
         <slot />

@@ -13,7 +13,7 @@ const { elementX, elementY, isOutside } = useMouseInElement(searchRef)
 </script>
 
 <template>
-  <div ref="searchRef" livraison-app="search" class="items-center border border-[color:#ffffff1a] cursor-pointer inline-flex text-sm h-9 relative select-none w-full mx-0 my-5 px-3 py-0 rounded-lg border-solid [background:#0000001a]">
+  <div ref="searchRef" livraison-app="search" class="items-center border border-[color:#ffffff1a] cursor-pointer inline-flex text-sm h-9 relative select-none w-full mx-0 my-5 px-3 py-0 rounded-lg border-solid [background:#0000001a] whitespace-nowrap text-ellipsis">
     <Icon name="carbon:search" class="mr-2 text-5 color-#a8a8a0 [user-select:none] flex-shrink-0" />
     Quick search
     <div class="flex-1" />
