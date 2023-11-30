@@ -17,7 +17,7 @@ const { elementX, elementY, isOutside } = useMouseInElement(searchRef)
     <Icon name="carbon:search" class="mr-2 text-5 color-#a8a8a0 [user-select:none] flex-shrink-0" />
     Quick search
     <div class="flex-1" />
-    <div class="text-15px text-white text-op-30">
+    <div class="text-3 text-white text-op-30">
       {{ isMac ? '⌘' : 'ctrl' }} + K
     </div>
     <div
