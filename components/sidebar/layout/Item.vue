@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<{
 </script>
 
 <template>
-  <div class="item-layout" :class="[props.check ? 'bg-black bg-op-10 dark:bg-white dark:bg-op-10' : '']">
+  <div class="item-layout" :class="[props.check ? 'bg-black bg-op-4 dark:bg-white dark:bg-op-10' : '']">
     <div class="items-center flex shrink-0 justify-start w-7">
       <slot name="icon" />
     </div>

@@ -5,6 +5,6 @@ defineOptions({
 </script>
 
 <template>
-  <div class="fixed left-0 right-0 top-0 bottom-0 bg-black bg-op-40 z-999" />
+  <div class="pointer-events-auto fixed bg-black bg-op-75 inset-0 z-1000" />
   <div class="absolute h-0 w-0" />
 </template>

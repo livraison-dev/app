@@ -10,7 +10,8 @@ const settingsStore = useSettingsStore()
 
 <style scoped>
 .plain{
-  @apply text-#a8a8a0 border-transparent;
+  @apply text-#8e8d91 dark:text-#a8a8a0 border-transparent;
+  @apply hover:bg-black hover:bg-op-4 dark:hover:bg-white dark:hover:bg-op-10;
   background: transparent;
 }
 .close-button{

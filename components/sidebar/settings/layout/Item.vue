@@ -46,6 +46,6 @@ const props = defineProps<{
   @apply mb-0.5 font-semibold text-sm;
 }
 .col .desc {
-  @apply text-#9c9ca0 text-xs;
+  @apply text-#8e8d91 dark:text-#9c9ca0 text-xs;
 }
 </style>

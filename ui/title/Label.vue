@@ -21,6 +21,6 @@ const props = withDefaults(defineProps<{
   @apply leading-[calc(1em_+_8px)] pl-6 pr-4 py-0 text-lg font-semibold;
 }
 .title-h2{
-  @apply items-center text-[#9c9ca0] flex text-sm justify-between mt-5 mb-1 leading-[calc(1em+8px)] pl-6 pr-4 py-0;
+  @apply items-center text-#8e8d91 dark:text-#9c9ca0 flex text-sm justify-between mt-5 mb-1 leading-[calc(1em+8px)] pl-6 pr-4 py-0;
 }
 </style>

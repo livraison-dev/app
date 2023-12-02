@@ -21,7 +21,7 @@ defineOptions({
 
 <style scoped>
 .modal-body-wrapper{
-  @apply fixed left-0 right-0 top-0 bottom-0 visible;
+  @apply fixed left-0 right-0 top-0 bottom-0 visible z-999999;
 }
 .modal-body-wrapper-scrollbar {
   @apply overflow-hidden relative z-auto h-full w-full;

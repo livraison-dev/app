@@ -10,11 +10,13 @@ const props = defineProps<{
 
 <template>
   <Teleport to="body">
-    <ModalBodyWrapper v-if="props.show">
+    <div v-if="props.show">
       <ModalMask />
-      <div class="m-auto text-white">
-        <slot />
-      </div>
-    </ModalBodyWrapper>
+      <ModalBodyWrapper>
+        <div class="m-auto dark:text-white text-black">
+          <slot />
+        </div>
+      </ModalBodyWrapper>
+    </div>
   </Teleport>
 </template>
