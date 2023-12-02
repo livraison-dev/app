@@ -8,6 +8,7 @@ const settingsStore = useSettingsStore()
       class="sidebar-settings-modal-box-shadow sidebar-settings-modal-box"
     >
       <SidebarSettingsModalClose />
+      <SidebarSettingsModalSidebar />
     </div>
   </ModalCard>
 </template>
@@ -16,8 +17,8 @@ const settingsStore = useSettingsStore()
 .sidebar-settings-modal-box{
   @apply max-h-85vh max-w-70vw overflow-hidden flex pointer-events-auto p-0;
   @apply bg-#1e1e1e box-border text-base;
-  @apply h-760px leading-1.6 font-normal w-1080px px-6 py-5 rounded-xl left-2/4 top-2/4;
-  @apply max-h-[calc(100vh_-_32px)] min-h-[194px] -translate-x-2/4 -translate-y-2/4;
+  @apply h-760px leading-1.6 font-normal w-1080px rounded-xl left-2/4 top-2/4;
+  @apply min-h-[194px] -translate-x-2/4 -translate-y-2/4;
   @apply fixed z-[1000];
   outline: none;
 }

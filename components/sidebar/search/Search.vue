@@ -3,9 +3,7 @@ defineOptions({
   name: 'SidebarSearch',
 })
 
-const isMac = computed(() => {
-  return navigator.platform.toUpperCase().includes('MAC')
-})
+const isMac = computed(() => process.client && navigator && navigator.userAgent && navigator.userAgent.match(/Macintosh;/))
 
 const searchRef = ref(null)
 
