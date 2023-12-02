@@ -1,4 +1,8 @@
 <script setup lang="ts">
+defineOptions({
+  name: 'Modal',
+})
+
 const props = defineProps<{
   show: boolean
 }>()

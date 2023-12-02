@@ -1,4 +1,7 @@
 <script setup lang="ts">
+defineOptions({
+  name: 'SidebarSettingsSidebar',
+})
 const settingsStore = useSettingsStore()
 </script>
 

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+defineOptions({
+  name: 'ModalBodyWrapper',
+})
 </script>
 
 <template>

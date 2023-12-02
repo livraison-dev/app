@@ -1,4 +1,7 @@
 <script setup lang="ts">
+defineOptions({
+  name: 'SidebarSettingsModal',
+})
 const settingsStore = useSettingsStore()
 </script>
 
@@ -7,8 +10,9 @@ const settingsStore = useSettingsStore()
     <div
       class="sidebar-settings-modal-box-shadow sidebar-settings-modal-box"
     >
-      <SidebarSettingsModalClose />
+      <SidebarSettingsModalCloseButton />
       <SidebarSettingsModalSidebar />
+      <SidebarSettingsModalContent />
     </div>
   </ModalCard>
 </template>
