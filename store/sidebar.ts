@@ -1,6 +1,6 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
-export const useSidebarStore = defineStore('useShowSidebar', () => {
+export const useSidebarStore = defineStore('sidebar', () => {
   const show = ref<boolean>(true)
 
   const size = ref<number>(0)
