@@ -15,22 +15,6 @@ const props = defineProps<{
         {{ props.subtitle }}
       </div>
     </div>
-    <div class="settings-modal-content">
-      <slot />
-    </div>
+    <slot />
   </div>
 </template>
-
-<style scoped>
-.settings-modal-content:last-of-type {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.settings-modal-content {
-    border-bottom: 1px solid #2e2e2e;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
-}
-</style>

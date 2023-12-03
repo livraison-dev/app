@@ -11,7 +11,7 @@ const settingsStore = useSettingsStore()
     <template #icon>
       <Icon name="carbon:settings" class="text-5 color-#77757d dark:color-#a8a8a0" />
     </template>
-    Setting
+    Settings
   </SidebarLayoutItem>
   <SidebarSettingsModal />
 </template>

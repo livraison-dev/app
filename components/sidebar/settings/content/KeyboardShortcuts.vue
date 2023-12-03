@@ -5,7 +5,7 @@ defineOptions({
 </script>
 
 <template>
-  <div class="text-#9c9ca0 text-sm font-semibold leading-5 mb-4">
-    General
-  </div>
+  <SidebarSettingsLayoutContent title="Keyboard shortcuts" subtitle="Check Keyboard Shortcuts quickly">
+    <SidebarSettingsLayoutIngredient label="General" />
+  </SidebarSettingsLayoutContent>
 </template>
