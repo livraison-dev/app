@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<{
 </script>
 
 <template>
-  <div class="item-layout" :class="[props.check ? 'bg-white bg-op-10' : '']">
+  <div class="item-layout" :class="[props.check ? 'bg-black bg-op-4 dark:bg-white dark:bg-op-10' : '']">
     <div class="items-center flex shrink-0 justify-start w-7">
       <slot name="icon" />
     </div>
@@ -23,6 +23,6 @@ const props = withDefaults(defineProps<{
 
 <style scoped>
 .item-layout{
-  @apply items-center rounded text-inherit cursor-pointer inline-flex text-sm min-h-[30px] text-left select-none w-full mt-1 px-3 py-0 hover:bg-white hover:bg-op-10;
+  @apply items-center rounded text-inherit cursor-pointer inline-flex text-sm min-h-[30px] text-left select-none w-full mt-1 px-3 py-0 hover:bg-black hover:bg-op-4 dark:hover:bg-white dark:hover:bg-op-10;
 }
 </style>
