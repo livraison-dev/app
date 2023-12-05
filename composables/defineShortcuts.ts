@@ -48,8 +48,8 @@ export function defineShortcuts(config: ShortcutsConfig, options: ShortcutsOptio
 
   const onKeyDown = (e: KeyboardEvent) => {
     // Input autocomplete triggers a keydown event
-    if (!e.key) 
-return
+    if (!e.key)
+      return
 
     const alphabeticalKey = /^[a-z]{1}$/i.test(e.key)
 
@@ -60,8 +60,8 @@ return
       chainedKey = chainedInputs.value.slice(-2).join('-')
 
       for (const shortcut of shortcuts.filter(s => s.chained)) {
-        if (shortcut.key !== chainedKey) 
-continue
+        if (shortcut.key !== chainedKey)
+          continue
 
         if (shortcut.condition.value) {
           e.preventDefault()
@@ -74,16 +74,16 @@ continue
 
     // try matching a standard shortcut
     for (const shortcut of shortcuts.filter(s => !s.chained)) {
-      if (e.key.toLowerCase() !== shortcut.key) 
-continue
-      if (e.metaKey !== shortcut.metaKey) 
-continue
-      if (e.ctrlKey !== shortcut.ctrlKey) 
-continue
+      if (e.key.toLowerCase() !== shortcut.key)
+        continue
+      if (e.metaKey !== shortcut.metaKey)
+        continue
+      if (e.ctrlKey !== shortcut.ctrlKey)
+        continue
       // shift modifier is only checked in combination with alphabetical keys
       // (shift with non-alphabetical keys would change the key)
-      if (alphabeticalKey && e.shiftKey !== shortcut.shiftKey) 
-continue
+      if (alphabeticalKey && e.shiftKey !== shortcut.shiftKey)
+        continue
       // alt modifier changes the combined key anyways
       // if (e.altKey !== shortcut.altKey) { continue }
 
