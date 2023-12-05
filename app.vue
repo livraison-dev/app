@@ -13,7 +13,7 @@ useHead({
 
 <template>
   <NuxtLayout>
-    <main font-sans text="gray-700 dark:gray-200 z-10">
+    <main font-sans text="gray-700 dark:gray-200" z-10>
       <LayoutRoot>
         <NuxtPage />
       </LayoutRoot>
