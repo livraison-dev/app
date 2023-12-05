@@ -6,7 +6,10 @@ const settingsStore = useSettingsStore()
 </script>
 
 <template>
-  <ModalCard :show="settingsStore.modalShow">
+  <ModalCard
+    mask
+    :show="settingsStore.modalShow"
+  >
     <div
       class="sidebar-settings-modal-box-shadow sidebar-settings-modal-box"
     >
