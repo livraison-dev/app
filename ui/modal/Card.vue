@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineOptions({
-  name: 'Modal',
+  name: 'LivraisonModal',
 })
 
 const props = withDefaults(defineProps<{

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineOptions({
-  name: 'TitleLabel',
+  name: 'LivraisonTitleLabel',
 })
 const props = withDefaults(defineProps<{
   tag?: 'h1' | 'h2'
