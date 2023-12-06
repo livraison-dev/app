@@ -1,14 +1,5 @@
 <script setup lang="ts">
 const searchStore = useSearchStore()
-
-const showSidebar = useSidebarStore()
-
-const { metaSymbol } = useShortcuts()
-
-function handleToggleLeftSidebar() {
-  showSidebar.handleToggleSidebar()
-  searchStore.toggleModal()
-}
 </script>
 
 <template>
@@ -41,23 +32,14 @@ function handleToggleLeftSidebar() {
         >
           <div livraison-app="cmd-list">
             <SidebarSearchItemGroup title="Recent" />
-            <SidebarSearchItemGroup title="Navigation" />
+            <SidebarSearchItemGroup title="Settings">
+              <SidebarSearchListSettingColorMode />
+            </SidebarSearchItemGroup>
             <SidebarSearchItemGroup title="Layout Controls">
-              <SidebarSearchItem @click="handleToggleLeftSidebar()">
-                <template #icon>
-                  <GlobalLeftSidebar class="shrink-0 select-none" />
-                </template>
-                <div class="font-normal text-justify text-base leading-6 flex flex-nowrap">
-                  <span class="text-[#1c9ee4] shrink-0 overflow-visible whitespace-pre" />
-                  <div class="overflow-hidden text-ellipsis whitespace-pre">
-                    {{ showSidebar.show ? 'Collapse' : 'Expand' }} Left Sidebar
-                  </div>
-                </div>
-                <template #suffix>
-                  <Kbd :label="metaSymbol" />
-                  <Kbd label="/" />
-                </template>
-              </SidebarSearchItem>
+              <SidebarSearchListToggleSidebar />
+            </SidebarSearchItemGroup>
+            <SidebarSearchItemGroup title="Navigation">
+              <SidebarSearchListGoToSettings />
             </SidebarSearchItemGroup>
           </div>
         </div>
@@ -69,13 +51,16 @@ function handleToggleLeftSidebar() {
 <style scoped>
 .sidebar-search-modal-box{
   @apply pointer-events-auto z-1000 relative;
-  @apply rounded-xl bg-#1e1e1e;
+  @apply rounded-xl bg-#fbfbfc dark:bg-#1e1e1e;
   @apply w-160 min-w-120 max-w-[calc(100vw-50px)];
   outline: none;
   will-change: transform,opacity;
 }
 .sidebar-search-modal-box-shadow{
-  box-shadow: px 16px 80px 0px rgba(0,0,0,.8);
+  box-shadow: 0px 10px 80px 0px rgba(0,0,0,.2);
+}
+.dark .sidebar-search-modal-box-shadow{
+  box-shadow: 0px 16px 80px 0px rgba(0,0,0,.8);
 }
 .sidebar-search-modal-box[data-state=entered],.sidebar-search-modal-box[data-state=entering] {
   animation: open-modal 120ms ease-in-out;

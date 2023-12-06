@@ -12,7 +12,7 @@ const props = defineProps<{
   <div livraison-app="cmd-group">
     <div
       livraison-app="cmd-group-title"
-      class="pt-4 p-2 text-#9c9ca0 text-xs font-semibold leading-[1.67]"
+      class="pt-4 p-2 text-#8e8d91 dark:text-#9c9ca0 text-xs font-semibold leading-[1.67]"
     >
       {{ props.title }}
     </div>
