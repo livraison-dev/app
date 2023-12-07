@@ -21,7 +21,7 @@ defineShortcuts({
   escape: {
     usingInput: true,
     handler: () => {
-      if (searchStore.modalShow =false) {
+      if (searchStore.modalShow == false) {
         searchStore.toggleModal()
       }
      
