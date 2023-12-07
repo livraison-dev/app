@@ -7,7 +7,6 @@ const sidebar = useSidebarStore()
 
 function splitpanesResize(size: number) {
   sidebar.panSize.size = size
-  sidebar.handleMoveSize()
 }
 </script>
 
