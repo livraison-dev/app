@@ -11,6 +11,8 @@ const { elementX, elementY, isOutside } = useMouseInElement(searchRef)
 
 const searchStore = useSearchStore()
 
+const { modalShow } = storeToRefs(searchStore)
+
 defineShortcuts({
   meta_k: {
     usingInput: true,
@@ -20,7 +22,10 @@ defineShortcuts({
   },
   escape: {
     usingInput: true,
-    handler: () => searchStore.modalShow ? searchStore.toggleModal() : '',
+    whenever: [modalShow],
+    handler: () => {
+      searchStore.toggleModal()
+    },
   },
 })
 </script>
