@@ -1,21 +1,16 @@
 <script setup lang="ts">
 const sidebar = useSidebarStore()
 
-watch(() => sidebar.show, () => {
-  if (sidebar.show)
-    sidebar.handleCreateSize()
-
-  else
-    sidebar.handleClearSize()
-})
+const { panSize, show } = storeToRefs(sidebar)
 </script>
 
 <template>
   <SplitpanesPane
+    v-if="show"
     class="bg-light-50 dark:bg-#050505 border-r border-gray-400/20"
-    :size="sidebar.panSize.size"
-    :min-size="sidebar.panSize.minSize"
-    :max-size="sidebar.panSize.maxSize"
+    :size="panSize.size"
+    :min-size="panSize.minSize"
+    :max-size="panSize.maxSize"
   >
     <nav class="flex flex-col" livraison-app="sideabr">
       <SidebarIconAction />

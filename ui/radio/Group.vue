@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineOptions({
-  name: 'RadioGroup',
+  name: 'LivraisonRadioGroup',
 })
 const props = defineProps<{
   modelValue: string

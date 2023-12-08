@@ -1,11 +1,15 @@
 <script setup lang="ts">
-type IconLabelIconName = 'github' | 'twitter' | 'discord' | 'youtube' | 'twitch' | 'mastodon'
+defineOptions({
+  name: 'LivraisonIconLabel',
+})
 
 const props = defineProps<{
   iconName: IconLabelIconName
   url: string
   label: string
 }>()
+
+type IconLabelIconName = 'github' | 'twitter' | 'discord' | 'youtube' | 'twitch' | 'mastodon'
 
 const iconLogos: {
   label: IconLabelIconName

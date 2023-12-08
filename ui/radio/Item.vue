@@ -1,4 +1,8 @@
 <script setup lang="ts">
+defineOptions({
+  name: 'LivraisonRadioItem',
+})
+
 const props = withDefaults(defineProps<{
   label: string
   value: string

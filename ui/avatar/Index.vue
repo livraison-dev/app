@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineOptions({
-  name: 'Avatar',
+  name: 'LivraisonAvatar',
 })
 
 const props = defineProps<{
