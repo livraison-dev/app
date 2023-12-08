@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@dflex/dnd':
-    specifier: ^3.10.6
-    version: 3.10.6
   '@vueuse/core':
     specifier: ^10.7.0
     version: 10.7.0(vue@3.3.11)
@@ -504,10 +501,6 @@ packages:
     resolution: {integrity: sha512-9CB/MKf/wdvbfkUdfrj+OkEwZ5b7rws0eogJ4293h+7b6KX5toPwym+VQKmILafNB9YiehqY0DlNrDcDhdWHSQ==}
     dependencies:
       mime: 3.0.0
-
-  /@dflex/dnd@3.10.6:
-    resolution: {integrity: sha512-GRayh1hQYeNKQ2PdkZ86oGIL2rVbi+ffeL9TPXwANeOV0DU5Pg8fEHChb3GwWry7l4iSwmenuYbhlOlr3gQgAg==}
-    dev: false
 
   /@es-joy/jsdoccomment@0.41.0:
     resolution: {integrity: sha512-aKUhyn1QI5Ksbqcr3fFJj16p99QdjUxXAEuFst1Z47DRyoiMwivIH9MV/ARcJOCXVjPfjITciej8ZD2O/6qUmw==}
