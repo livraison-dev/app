@@ -15,11 +15,13 @@
 </script>
 
 <template>
+  <div class="flex">
     <template v-for="tag in tagList" :key="tag.url">
         <div>
-            <HeaderTag :label="tag.requestType" :url="tag.url"></HeaderTag>
+            <HeaderTag :label="tag.requestType" :url="tag.url"></HeaderTag>           
         </div>
     </template>
-        
+    <Icon name="material-symbols:add" class="text-5 mt-0 cursor-pointer"/>
+  </div>
 </template>
 
