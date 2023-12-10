@@ -5,6 +5,6 @@ const showSidebar = useSidebarStore()
 <template>
   <div>
     <SidebarIconAction v-if="!showSidebar.show" />
-    <Header></Header>
+    <Header />
   </div>
 </template>
