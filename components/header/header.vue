@@ -21,6 +21,6 @@ const tagList = ref<{
         <HeaderTag :label="tag.requestType" :url="tag.url" />
       </div>
     </template>
-    <Icon name="material-symbols:add" class="text-5 mt-0 cursor-pointer" />
+    <Icon name="carbon:add" class="text-5 mt-0 cursor-pointer" />
   </div>
 </template>
