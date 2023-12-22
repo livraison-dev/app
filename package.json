@@ -18,28 +18,29 @@
     "release": "bumpp package.json --commit --push --tag"
   },
   "dependencies": {
-    "@vueuse/core": "^10.6.1",
+    "@vueuse/core": "^10.7.0",
     "nuxt": "^3.8.2",
     "pinia": "^2.1.7",
-    "unocss": "^0.57.7"
+    "unocss": "^0.58.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.1.0",
-    "@iconify-json/carbon": "^1.1.21",
-    "@iconify-json/twemoji": "^1.1.12",
-    "@nuxt/devtools": "^1.0.4",
+    "@antfu/eslint-config": "^2.4.2",
+    "@iconify-json/carbon": "^1.1.24",
+    "@iconify-json/twemoji": "^1.1.14",
+    "@nuxt/devtools": "^1.0.5",
     "@nuxtjs/color-mode": "^3.3.2",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@pinia/nuxt": "^0.5.1",
-    "@unocss/nuxt": "^0.57.7",
+    "@unocss/nuxt": "^0.58.0",
     "@vueuse/math": "^10.7.0",
-    "@vueuse/nuxt": "^10.6.1",
+    "@vueuse/nuxt": "^10.7.0",
     "bumpp": "^9.2.0",
-    "eslint": "^8.54.0",
+    "eslint": "^8.55.0",
     "happy-dom": "^12.10.3",
-    "nuxt-icon": "^0.6.6",
+    "nuxt-icon": "^0.6.7",
     "nuxt-vitest": "^0.11.5",
-    "typescript": "^5.3.2",
-    "vitest": "^0.34.6"
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.2",
+    "vue-draggable-plus": "^0.3.0"
   }
 }
