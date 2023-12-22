@@ -13,6 +13,9 @@ const { panSize } = storeToRefs(sidebar)
     <Splitpanes @resize="panSize.size = $event[0].size">
       <Sidebar />
       <SplitpanesPane :size="80" :min-size="70" :max-size="85">
+        <!-- header -->
+
+        <Header />
         <slot />
       </SplitpanesPane>
     </Splitpanes>

@@ -12,10 +12,15 @@ const tagList = ref<{
     url: 'https://livraison-app.vercel.app',
   },
 ])
+
+const sidebar = useSidebarStore()
+
+const { show } = storeToRefs(sidebar)
 </script>
 
 <template>
   <div class="flex">
+    <SidebarIconAction v-if="!show" />
     <template v-for="tag in tagList" :key="tag.url">
       <div>
         <HeaderTag :label="tag.requestType" :url="tag.url" />
