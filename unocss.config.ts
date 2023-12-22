@@ -17,6 +17,7 @@ export default defineConfig({
     ['POST', 'inline-block text-yellow-400'],
     ['PUT', 'inline-block text-cyan-400'],
     ['DELETE', 'inline-block text-rose-500'],
+    ['icon-hover', 'hover:bg-black hover:bg-op-4 dark:hover:bg-white dark:hover:bg-op-10 rounded'],
   ],
   presets: [
     presetUno(),

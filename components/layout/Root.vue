@@ -14,9 +14,11 @@ const { panSize } = storeToRefs(sidebar)
       <Sidebar />
       <SplitpanesPane :size="80" :min-size="70" :max-size="85">
         <!-- header -->
-
         <Header />
-        <slot />
+        <!-- bodyer -->
+        <div class="mx-4">
+          <slot />
+        </div>
       </SplitpanesPane>
     </Splitpanes>
   </LayoutBasic>
