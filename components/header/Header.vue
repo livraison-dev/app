@@ -19,11 +19,15 @@ const { show } = storeToRefs(sidebar)
 </script>
 
 <template>
-  <div class="flex h-14">
+  <div class="flex h-14 items-center">
     <SidebarIconAction v-if="!show" />
-    <template v-for="tag in tagList" :key="tag.url">
-      <HeaderTag :label="tag.requestType" :url="tag.url" />
-    </template>
+    <Dnd
+      v-model="tagList"
+      class=""
+      :animation="100"
+    >
+      <HeaderTag v-for="tag in tagList" :key="tag.url" :label="tag.requestType" :url="tag.url" />
+    </Dnd>
     <HeaderIconAdd />
   </div>
 </template>
