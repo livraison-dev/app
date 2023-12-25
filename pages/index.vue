@@ -1,9 +1,9 @@
 <script setup lang="ts">
-
+const linkQuery = useRouteQuery('link')
 </script>
 
 <template>
   <div>
-    home page
+    {{ linkQuery }}
   </div>
 </template>

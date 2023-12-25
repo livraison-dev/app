@@ -16,6 +16,22 @@ const tagList = ref<{
 const sidebar = useSidebarStore()
 
 const { show } = storeToRefs(sidebar)
+
+const linkQuery = useRouteQuery('link')
+
+function remakeRouteQuery() {
+  if (linkQuery.value === undefined)
+    linkQuery.value = tagList.value[0].url
+}
+
+watch(linkQuery, () => {
+  if (linkQuery.value === undefined)
+    linkQuery.value = tagList.value[0].url
+})
+
+onMounted(() => {
+  remakeRouteQuery()
+})
 </script>
 
 <template>
