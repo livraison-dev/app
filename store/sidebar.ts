@@ -9,7 +9,7 @@ export const useSidebarStore = defineStore('sidebar', () => {
     maxSize: number
   }>({
     minSize: 15,
-    size: 0,
+    size: 20,
     maxSize: 30,
   })
 

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const showSidebar = useSidebarStore()
+const linkQuery = useRouteQuery('link')
 </script>
 
 <template>
   <div>
-    <SidebarIconAction v-if="!showSidebar.show" />
+    {{ linkQuery }}
   </div>
 </template>
