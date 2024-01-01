@@ -4,6 +4,6 @@ const linkQuery = useRouteQuery('link')
 
 <template>
   <div>
-    {{ linkQuery }}
+    <Input v-model="linkQuery" />
   </div>
 </template>
