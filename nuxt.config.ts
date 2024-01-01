@@ -28,6 +28,7 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
     '~/styles/splitpanes.css',
+    '~/styles/input.css',
   ],
   colorMode: {
     classSuffix: '',
