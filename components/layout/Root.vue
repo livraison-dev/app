@@ -16,9 +16,9 @@ const { panSize } = storeToRefs(sidebar)
         <!-- header -->
         <Header />
         <!-- bodyer -->
-        <div class="mx-4">
+        <main class="mx-4">
           <slot />
-        </div>
+        </main>
       </SplitpanesPane>
     </Splitpanes>
   </LayoutBasic>

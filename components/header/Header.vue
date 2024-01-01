@@ -35,7 +35,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex h-14 items-center">
+  <header class="flex h-14 items-center">
     <SidebarIconAction v-if="!show" />
     <Dnd
       v-model="tagList"
@@ -45,5 +45,5 @@ onMounted(() => {
       <HeaderTag v-for="tag in tagList" :key="tag.url" :label="tag.requestType" :url="tag.url" />
     </Dnd>
     <HeaderIconAdd />
-  </div>
+  </header>
 </template>
