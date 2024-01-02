@@ -18,6 +18,8 @@ import {
 export default defineConfig({
   theme: mergeDeep<Theme>(unoTheme, {
     colors: {
+      brand: '#00DC82',
+      primary: '#099e61',
       context: 'rgba(var(--app-ui-c-context),%alpha)',
     },
   }),
@@ -31,6 +33,11 @@ export default defineConfig({
       }
     }],
     [/^app-(.*)$/, fonts[1][1] as any],
+    ['app-solid', {
+      'background-color': 'rgba(var(--app-ui-c-context), 1) !important',
+      'border-color': 'rgba(var(--app-ui-c-context), 1)',
+      'color': 'white !important',
+    }],
     ['app-dashed', { 'border-style': 'dashed' }],
     ['app-disabled', {
       'opacity': 0.6,
@@ -67,16 +74,20 @@ export default defineConfig({
     ['DELETE', 'inline-block text-rose-500'],
     ['icon-hover', 'hover:bg-black hover:bg-op-4 dark:hover:bg-white dark:hover:bg-op-10 rounded'],
     ['app-bg-base', 'bg-white dark:bg-[#151515]'],
+    ['app-bg-active', 'bg-gray:5'],
+    ['app-active-base', 'ring-3 ring-context/10'],
     ['app-border-base', 'border-gray/20'],
     ['app-focus-base', 'ring-2 ring-context/50'],
     // button
-    ['app-button-base', 'border n-border-base rounded shadow-sm px-1em py-0.25em inline-flex items-center gap-1 op80 !outline-none touch-manipulation'],
+    ['app-button-base', 'border app-border-base rounded shadow-sm px-1em py-0.25em inline-flex items-center gap-1 op80 !outline-none touch-manipulation'],
     ['app-button-hover', 'op100 !border-context text-context'],
-    ['app-button-active', 'n-active-base bg-context/5'],
+    ['app-button-active', 'app-active-base bg-context/5'],
     ['app-button-icon', '-ml-0.2em mr-0.2em text-1.1em'],
-    ['app-icon-button', 'aspect-1/1 w-1.6em h-1.6em flex items-center justify-center rounded op50 hover:op100 hover:n-bg-active'],
+    ['app-icon-button', 'aspect-1/1 w-1.6em h-1.6em flex items-center justify-center rounded op50 hover:op100 hover:app-bg-active'],
     ['app-transition', 'transition-all duration-200'],
     ['app-icon', 'flex-none'],
+    ['app-glass-effect', 'backdrop-blur-6 bg-white/80 dark:bg-[#151515]/90'],
+    ['app-navbar-glass', 'sticky z-10 top-0 app-glass-effect'],
   ],
   presets: [
     presetUno(),
