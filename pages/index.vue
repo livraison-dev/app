@@ -14,7 +14,7 @@ function clean() {
 </script>
 
 <template>
-  <div class="flex flex-col flex-gap-2 flex-none px-4 app-navbar-glass">
+  <div class="flex flex-col flex-gap-2 flex-none px-4">
     <div class="flex flex-gap-2 items-center">
       <div class="w-full relative">
         <Input v-model="linkQuery" />
