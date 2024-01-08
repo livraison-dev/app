@@ -11,11 +11,16 @@ function clean() {
   source.value = ''
   linkQuery.value = ''
 }
+
+const method = ref('GET')
+
+const methodOptions = ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS', 'CONNECT', 'TRACE']
 </script>
 
 <template>
   <div class="flex flex-col flex-gap-2 flex-none px-4">
     <div class="flex flex-gap-2 items-center">
+      <SelectMenu v-model="method" :options="methodOptions" />
       <div class="w-full relative">
         <Input v-model="linkQuery" />
         <div class="absolute right-2 top-1.5 flex flex-gap-1">
