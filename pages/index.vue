@@ -44,5 +44,8 @@ const methodOptions = ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS
         <IconBase icon="carbon:send" />
       </ButtonBase>
     </div>
+    <div class="mt-3">
+      <Details />
+    </div>
   </div>
 </template>
