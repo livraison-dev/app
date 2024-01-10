@@ -5,14 +5,14 @@ defineOptions({
 
 const sidebar = useSidebarStore()
 
-const { panSize } = storeToRefs(sidebar)
+const { panSize, show } = storeToRefs(sidebar)
 </script>
 
 <template>
   <LayoutBasic :border-positions="[]">
     <Splitpanes @resize="panSize.size = $event[0].size">
       <Sidebar />
-      <SplitpanesPane :size="80" :min-size="70" :max-size="85">
+      <SplitpanesPane :size="show ? 80 : 100" :min-size="show ? 70 : 100" :max-size="show ? 85 : 100">
         <!-- header -->
         <Header />
         <!-- bodyer -->
